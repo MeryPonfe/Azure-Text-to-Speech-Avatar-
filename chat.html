@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Talking Avatar Chat Demo</title>
+    <link href="./css/styles.css" rel="stylesheet">
+    <script src="https://aka.ms/csspeech/jsbrowserpackageraw"></script>
+    <script src="./js/chat.js"></script>
+</head>
+<body>
+<h1>Talking Avatar Chat Demo</h1>
+
+<div id="configuration">
+  <div id="cogSearchConfig" hidden="hidden">
+    <h2 style="background-color: white; width: 400px;">Azure Cognitive Search Resource</h2>
+    <br />
+  </div>
+</div>
+
+<h2 style="background-color: white; width: 400px;">Avatar Conversation Control Panel</h2>
+<label for="prompt">System Prompt</label><br/>
+<textarea id="prompt">Please provide concise answers, not exceeding 25 words.</textarea>
+<br/>
+
+<button id="startSession" onclick="window.startSession()">Open Video Connection</button>
+<button id="startMicrophone" onclick="window.startMicrophone()" disabled>Start Microphone</button>
+<button id="clearChatHistory" onclick="window.clearChatHistory()">Clear Chat History</button>
+<button id="stopSession" onclick="window.stopSession()" disabled>Close Video Connection</button>
+
+<h2 style="background-color: white; width: 100px;">Video</h2>
+<div id="videoContainer" style="position: relative; width: 960px;">
+  <div id="overlayArea" style="position: absolute;">
+    <textarea id="chatHistory" style="
+        width: 360px;
+        height: 500px;
+        font-size: medium;
+        border: none;
+        resize: none;
+        background-color: transparent;
+        overflow: hidden;"></textarea>
+  </div>
+  <div id="remoteVideo"></div>
+</div>
+
+<h2 style="background-color: white; width: 100px;">Logs</h2>
+<div id="logging"></div>
+</body>
+</html>
