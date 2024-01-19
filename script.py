@@ -6,7 +6,7 @@ from azure.communication.identity import CommunicationIdentityClient
 
 try:
    print("Azure Communication Services - Access Relay Configuration  Quickstart")
-   connection_str = "endpoint=https://XXXX.europe.communication.azure.com/;accesskey=YOUR_KEY"
+   connection_str = "endpoint=https://YOUR_RESOURCE.YOUR_REGION.communication.azure.com/;accesskey=YOUR_KEY"
    identity_client = CommunicationIdentityClient.from_connection_string(connection_str)
    relay_client = CommunicationRelayClient.from_connection_string(connection_str)
 
